@@ -1,27 +1,46 @@
 package com.strings;
-// Special Onbject and nulls 
+
+/*
+ * Category 5: Special Object & null Based Questions
+ */
 public class QuestionCat5 {
-public static void main(String[] args) {
-	// Q1
-//	String s1 = null;
-//	String s2 = null;
-//	System.out.println(s1==s2); // true 
-	
-	// Q2
-//	String s1 = null;
-//	String s2 = "java";
-//	System.out.println(s1==s2); // false
-//			
-	
-//	String s1 = "java";
-//	StringBuilder s2 = new StringBuilder("java");
-//	System.out.println(s1==s2); // not compile 
-//	System.out.println(s1.equals(s2)); // false 
-//	
-	
-	// Q3
-//	Object obj = "Java";
-//	String s1 = "Java";
-//	System.out.println(obj==s1); // true there is relation in Object class and String class 
-}
+
+    public static void main(String[] args) {
+
+        // ===============================
+        // Q1: null Reference Comparison
+        // ===============================
+        String s1 = null;
+        String s2 = null;
+
+        System.out.println("Q1 (null == null): " + (s1 == s2));  // true
+
+
+        // ===============================
+        // Q2: null vs Literal
+        // ===============================
+        String s3 = null;
+        String s4 = "java";
+
+        System.out.println("Q2 (null == literal): " + (s3 == s4));  // false
+
+
+        // ===============================
+        // Q3: String vs StringBuilder
+        // ===============================
+        String s5 = "java";
+        StringBuilder s6 = new StringBuilder("java");
+
+        // System.out.println(s5 == s6);   // ❌ Compilation Error (Different Types)
+        System.out.println("Q3 (.equals): " + s5.equals(s6));  // false
+
+
+        // ===============================
+        // Q4: Object Reference with String
+        // ===============================
+        Object obj = "Java";
+        String s7 = "Java";
+
+        System.out.println("Q4 (Object == String): " + (obj == s7));  // true
+    }
 }
